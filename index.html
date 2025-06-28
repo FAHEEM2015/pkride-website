@@ -1,86 +1,130 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PK Ride</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.7;
+      direction: rtl;
+    }
+    .hero {
+      background-color: #16a34a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+    .section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .button {
+      background-color: #16a34a;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .button:hover {
+      background-color: #15803d;
+    }
+    .box {
+      background-color: #f3f4f6;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .yellow {
+      background-color: #fef9c3;
+    }
+    ul {
+      padding-right: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+    a {
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>PK Ride</h1>
+    <p>سفر کا نیا انداز – آسان، محفوظ اور سستا</p>
+    <p>💡 ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس</p>
+  </div>
 
-export default function PKRideLandingUrdu() {
-  return (
-    <div className="bg-white text-gray-900 font-sans leading-relaxed">
-      {/* Hero Section */}
-      <section className="bg-green-600 text-white py-12 px-4 text-center rounded-b-2xl shadow-md">
-        <h1 className="text-4xl font-bold mb-4">PK Ride</h1>
-        <p className="text-lg">سفر کا نیا انداز – آسان، محفوظ اور سستا</p>
-        <p className="mt-2">💡 ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس</p>
-      </section>
+  <!-- Service Description -->
+  <section class="section">
+    <p>
+      Swat District, Chitral، Kumrat Valley، Kalkot، Sheringal، Upper Dir،
+      Ushirai Dara، Wari City، Barawal، Doog Dara، Adenzai, Balambat, Khal, Lal Qilla,
+      Munda, Samar Bagh, Timergara جیسے پسماندہ اور خوبصورت علاقوں میں اپنی سفری خدمات فراہم کر رہی ہے۔
+    </p>
+    <p>
+      ہمارا مشن ہے کہ ہم ان دور دراز علاقوں کے لوگوں کو محفوظ، قابلِ اعتماد، سستی
+      اور جدید ٹیکنالوجی سے لیس آن لائن ٹیکسی سروس فراہم کریں تاکہ وہ اعتماد کے ساتھ
+      اپنی منزل تک پہنچ سکیں۔ PK Ride نہ صرف سفری سہولیات کو بہتر بنانا چاہتا ہے بلکہ
+      مقامی روزگار کے مواقع بھی پیدا کر رہا ہے۔
+    </p>
+    <a href="#" class="button">اینڈرائیڈ ایپ ڈاؤن لوڈ کریں</a>
+  </section>
 
-      {/* Service Description */}
-      <section className="p-6 max-w-4xl mx-auto">
-        <p className="mb-4">
-          Swat District, Chitral, Kumrat Valley, Kalkot, Sheringal, Upper Dir, Ushirai Dara,
-          Wari City, Barawal, Doog Dara, Adenzai, Balambat, Khal, Lal Qilla, Munda, Samar Bagh,
-          Timergara جیسے پسماندہ اور خوبصورت علاقوں میں اپنی سفری خدمات فراہم کر رہی ہے۔
-        </p>
-        <p className="mb-4">
-          ہمارا مشن ہے کہ ہم ان دور دراز علاقوں کے لوگوں کو محفوظ، قابلِ اعتماد، سستی
-          اور جدید ٹیکنالوجی سے لیس آن لائن ٹیکسی سروس فراہم کریں تاکہ وہ اعتماد کے ساتھ
-          اپنی منزل تک پہنچ سکیں۔ PK Ride نہ صرف سفری سہولیات کو بہتر بنانا چاہتا ہے بلکہ
-          مقامی روزگار کے مواقع بھی پیدا کر رہا ہے۔
-        </p>
-        <button className="bg-green-600 text-white py-2 px-6 rounded-full mt-4 hover:bg-green-700">
-          اینڈرائیڈ ایپ ڈاؤن لوڈ کریں
-        </button>
-      </section>
+  <!-- Bike Ride Section -->
+  <section class="section box">
+    <h2>🚴 بائیک رائیڈ سروس</h2>
+    <p>
+      اب دفتر، بازار یا شہر کے اندر کہیں بھی آسانی سے بائیک رائیڈ بُک کریں — چند منٹ میں آپ کے دروازے پر۔
+    </p>
+    <ul>
+      <li>🔥 انتہائی کم کرایہ</li>
+      <li>⏱️ ٹریفک سے بچنے کا حل</li>
+      <li>📱 آسان ایپ بُکنگ</li>
+      <li>🧍‍♂️ قابلِ اعتماد رائیڈرز</li>
+      <li>🛡️ محفوظ اور آرام دہ سفر</li>
+    </ul>
+  </section>
 
-      {/* Bike Ride Section */}
-      <section className="bg-gray-100 py-8 px-4 rounded-xl max-w-4xl mx-auto my-6 shadow">
-        <h2 className="text-2xl font-bold mb-2 text-green-700">🚴 بائیک رائیڈ سروس</h2>
-        <p className="mb-2">
-          اب دفتر، بازار یا شہر کے اندر کہیں بھی آسانی سے بائیک رائیڈ بُک کریں — چند منٹ میں
-          آپ کے دروازے پر۔
-        </p>
-        <ul className="list-disc pr-4 text-right space-y-1">
-          <li>🔥 انتہائی کم کرایہ</li>
-          <li>⏱️ ٹریفک سے بچنے کا حل</li>
-          <li>📱 آسان ایپ بُکنگ</li>
-          <li>🧍‍♂️ قابلِ اعتماد رائیڈرز</li>
-          <li>🛡️ محفوظ اور آرام دہ سفر</li>
-        </ul>
-      </section>
+  <!-- Delivery Section -->
+  <section class="section">
+    <h2>🚚 PK Rider – آپ کی دہلیز پر</h2>
+    <ul>
+      <li>🧺 گروسری، سبزیاں، پھل</li>
+      <li>🛢️ گیس، پانی اور کچن سامان</li>
+      <li>💊 ادویات</li>
+      <li>👕 فیشن آئٹمز</li>
+      <li>📦 کورئیر اور ہوم ڈیلیوری</li>
+    </ul>
+  </section>
 
-      {/* Delivery Section */}
-      <section className="p-6 max-w-4xl mx-auto my-6">
-        <h2 className="text-2xl font-bold text-green-700 mb-4">🚚 PK Rider – آپ کی دہلیز پر</h2>
-        <ul className="list-disc pr-4 text-right space-y-1">
-          <li>🧺 گروسری، سبزیاں، پھل</li>
-          <li>🛢️ گیس، پانی اور کچن سامان</li>
-          <li>💊 ادویات</li>
-          <li>👕 فیشن آئٹمز</li>
-          <li>📦 کورئیر اور ہوم ڈیلیوری</li>
-        </ul>
-      </section>
+  <!-- Food Section -->
+  <section class="section box yellow">
+    <h2>🍔 کھانا</h2>
+    <ul>
+      <li>🍢 کباب، تکہ، چکن رول</li>
+      <li>🐟 فریش مچھلی</li>
+      <li>🍕 فاسٹ فوڈ</li>
+      <li>🍛 دیسی کھانے</li>
+    </ul>
+  </section>
 
-      {/* Food Section */}
-      <section className="bg-yellow-100 py-8 px-4 rounded-xl max-w-4xl mx-auto my-6 shadow">
-        <h2 className="text-2xl font-bold text-yellow-800 mb-2">🍔 کھانا</h2>
-        <ul className="list-disc pr-4 text-right space-y-1">
-          <li>🍢 کباب، تکہ، چکن رول</li>
-          <li>🐟 فریش مچھلی</li>
-          <li>🍕 فاسٹ فوڈ</li>
-          <li>🍛 دیسی کھانے</li>
-        </ul>
-      </section>
-
-      {/* Contact Section */}
-      <section className="p-6 max-w-4xl mx-auto my-6 text-center border-t border-gray-200">
-        <h2 className="text-2xl font-bold text-green-700 mb-4">رابطہ کریں</h2>
-        <p className="mb-2">📞 0300-2044913 | 0313-8186414</p>
-        <p className="mb-2">✉️ pkride1122@gmail.com</p>
-        <a
-          href="https://facebook.com/yourpage"
-          className="text-blue-600 underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Facebook Page
-        </a>
-      </section>
-    </div>
-  );
-}
+  <!-- Contact Section -->
+  <section class="section" style="border-top: 1px solid #ddd; text-align: center;">
+    <h2>رابطہ کریں</h2>
+    <p>📞 0300-2044913 | 0313-8186414</p>
+    <p>✉️ pkride1122@gmail.com</p>
+    <p><a href="https://facebook.com/yourpage">Facebook Page</a></p>
+  </section>
+</body>
+</html>
