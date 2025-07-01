@@ -1,166 +1,186 @@
-1. Banner (pkride-banner.jpg) with big title
-2. Hero Section (in Urdu, with download button)
-3. Bike Ride Section
-4. Delivery Section
-5. Screenshots
-6. Download App
-7. Contact
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PK Ride</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.7;
+      direction: rtl;
+    }
+    .hero {
+      background-color: #16a34a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+    .section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .button {
+      background-color: #16a34a;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .button:hover {
+      background-color: #15803d;
+    }
+    .box {
+      background-color: #f3f4f6;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .yellow {
+      background-color: #fef9c3;
+    }
+    .promo {
+      background-image: url('pkride-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      text-align: center;
+      color: white;
+      padding: 3rem 1rem;
+    }
+    .promo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .promo-content {
+      position: relative;
+      z-index: 10;
+    }
+    .screenshots {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .screenshot-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      width: 200px;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    ul {
+      padding-right: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+    a {
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>PK Ride</h1>
+    <p>سفر کا نیا انداز – آسان، محفوظ اور سستا</p>
+    <p>💡 ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس</p>
+  </div>
 
+  <!-- Service Description -->
+  <section class="section">
+    <p>
+      Swat District, Chitral، Kumrat Valley، Kalkot، Sheringal، Upper Dir،
+      Ushirai Dara، Wari City، Barawal، Doog Dara، Adenzai, Balambat, Khal, Lal Qilla,
+      Munda, Samar Bagh, Timergara جیسے پسماندہ اور خوبصورت علاقوں میں اپنی سفری خدمات فراہم کر رہی ہے۔
+    </p>
+    <p>
+      ہمارا مشن ہے کہ ہم ان دور دراز علاقوں کے لوگوں کو محفوظ، قابلِ اعتماد، سستی
+      اور جدید ٹیکنالوجی سے لیس آن لائن ٹیکسی سروس فراہم کریں تاکہ وہ اعتماد کے ساتھ
+      اپنی منزل تک پہنچ سکیں۔ PK Ride نہ صرف سفری سہولیات کو بہتر بنانا چاہتا ہے بلکہ
+      مقامی روزگار کے مواقع بھی پیدا کر رہا ہے۔
+    </p>
+    <a href="https://github.com/YourUsername/YourRepoName/releases/download/v1.0/app-release.apk" class="button">اینڈرائیڈ ایپ ڈاؤن لوڈ کریں</a>
+  </section>
 
+  <!-- Bike Ride Section -->
+  <section class="section box">
+    <h2>🚴 بائیک رائیڈ سروس</h2>
+    <p>
+      اب دفتر، بازار یا شہر کے اندر کہیں بھی آسانی سے بائیک رائیڈ بُک کریں — چند منٹ میں آپ کے دروازے پر۔
+    </p>
+    <ul>
+      <li>🔥 انتہائی کم کرایہ</li>
+      <li>⏱️ ٹریفک سے بچنے کا حل</li>
+      <li>📱 آسان ایپ بُکنگ</li>
+      <li>🧍‍♂️ قابلِ اعتماد رائیڈرز</li>
+      <li>🛡️ محفوظ اور آرام دہ سفر</li>
+    </ul>
+  </section>
 
+  <!-- Delivery Section -->
+  <section class="section">
+    <h2>🚚 PK Rider – آپ کی دہلیز پر</h2>
+    <ul>
+      <li>🧺 گروسری، سبزیاں، پھل</li>
+      <li>🛢️ گیس، پانی اور کچن سامان</li>
+      <li>💊 ادویات</li>
+      <li>👕 فیشن آئٹمز</li>
+      <li>📦 کورئیر اور ہوم ڈیلیوری</li>
+    </ul>
+  </section>
 
+  <!-- Food Section -->
+  <section class="section box yellow">
+    <h2>🍔 کھانا</h2>
+    <ul>
+      <li>🍢 کباب، تکہ، چکن رول</li>
+      <li>🐟 فریش مچھلی</li>
+      <li>🍕 فاسٹ فوڈ</li>
+      <li>🍛 دیسی کھانے</li>
+    </ul>
+  </section>
 
-import React from "react";
-
-export default function App() {
-  return (
-    <div className="font-sans text-gray-900 leading-relaxed">
-      {/* Banner */}
-      <section
-        className="relative bg-green-600 text-white text-center py-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/pkride-main.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative z-10 px-4 max-w-xl mx-auto">
-          <h1 className="text-5xl font-extrabold text-yellow-300 drop-shadow mb-4">
-            PK Ride
-          </h1>
-          <p className="text-xl font-medium">Pakistan’s Smart Ride App</p>
-        </div>
-      </section>
-
-      {/* Intro Section */}
-      <section className="bg-green-600 text-white text-center py-12 px-4">
-        <h2 className="text-3xl font-bold mb-4">PK Ride</h2>
-        <p className="text-lg">سفر کا نیا انداز – آسان، محفوظ اور سستا</p>
-        <p className="mt-4 max-w-2xl mx-auto text-base">
-          💡 PK Ride ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس ہے جو Swat, Dir,
-          Chitral، اور آس پاس کے علاقوں میں سستی اور محفوظ سواری فراہم کرتی ہے۔
-        </p>
-        <a
-          href="https://drive.google.com/uc?export=download&id=1k3ubaONxUAsl6pLT8di_M0UEJbq4iPD9"
-          className="mt-6 inline-block px-6 py-3 bg-white text-green-700 font-semibold rounded-full hover:bg-green-100 transition-all hover:scale-105"
-        >
-          📥 ایپ ڈاؤن لوڈ کریں
-        </a>
-      </section>
-
-      {/* Bike Ride Section */}
-      <section className="bg-yellow-50 py-12 px-6 text-right">
-        <h2 className="text-2xl font-bold text-center mb-4">
-          📍 پہلی بار آن لائن بائیک رائیڈ
-        </h2>
-        <p className="mb-4">
-          🚴 PK Ride آپ کے شہر میں بائیک کے ذریعے تیز، سستی اور آسان سواری لایا
-          ہے۔
-        </p>
-        <ul className="space-y-2 text-base">
-          <li>🔥 کم ترین کرایہ</li>
-          <li>⏱️ فوری رسائی</li>
-          <li>📱 آسان ایپ</li>
-          <li>🧍‍♂️ تصدیق شدہ رائیڈرز</li>
-          <li>🛡️ محفوظ سفر</li>
-        </ul>
-      </section>
-
-      {/* Delivery Section */}
-      <section className="bg-pink-100 py-12 px-6 text-right">
-        <h2 className="text-2xl font-bold text-pink-700 mb-4">
-          🚚 PK Rider – ہر چیز گھر پر
-        </h2>
-        <p className="mb-4">
-          گھر بیٹھے حاصل کریں: گروسری، ادویات، کھانا، فیشن، کورئیر سروس اور بہت
-          کچھ!
-        </p>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-          <li>🧺 گروسری، سبزیاں، پھل</li>
-          <li>💊 ادویات و ایمرجنسی</li>
-          <li>👕 کپڑے، فیشن آئٹمز</li>
-          <li>📦 کورئیر، بزنس آرڈرز</li>
-        </ul>
-        <a
-          href="#"
-          className="inline-block px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition hover:scale-105"
-        >
-          📲 ابھی آرڈر کریں
-        </a>
-      </section>
-
-      {/* Promo Section */}
-      <section
-        className="relative bg-cover bg-center text-white text-center py-20 px-6"
-        style={{ backgroundImage: "url('/images/pkride-main.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative z-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">
-            PK Ride – پاکستان کی اسمارٹ رائیڈ ایپ
-          </h2>
-          <p className="mb-4">آسان، تیز اور محفوظ سواری کا حل</p>
-          <a
-            href="https://drive.google.com/uc?export=download&id=1k3ubaONxUAsl6pLT8di_M0UEJbq4iPD9"
-            className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-full text-white font-semibold transition hover:scale-105"
-          >
-            🚗 ایپ ڈاؤن لوڈ کریں
-          </a>
-        </div>
-      </section>
-
-      {/* Screenshots Section */}
-      <section className="bg-blue-50 text-center py-12 px-6">
-        <h2 className="text-2xl font-bold mb-4">ایپ کے اسکرین شاٹس</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="bg-white border rounded-lg h-56 flex items-center justify-center shadow">
-            اسکرین شاٹ 1
-          </div>
-          <div className="bg-white border rounded-lg h-56 flex items-center justify-center shadow">
-            اسکرین شاٹ 2
-          </div>
-          <div className="bg-white border rounded-lg h-56 flex items-center justify-center shadow">
-            اسکرین شاٹ 3
-          </div>
-        </div>
-      </section>
-
-      {/* Download Prompt */}
-      <section
-        className="relative text-white text-center py-16 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/pkride-main.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="relative z-10 px-4">
-          <h2 className="text-xl font-bold mb-2">ابھی ایپ ڈاؤن لوڈ کریں</h2>
-          <p className="mb-4">PK Ride کے ساتھ اپنا سفر شروع کریں</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://drive.google.com/uc?export=download&id=1k3ubaONxUAsl6pLT8di_M0UEJbq4iPD9"
-              className="bg-black px-4 py-2 rounded-lg"
-            >
-              📲 Android APK
-            </a>
-            <span className="bg-gray-700 px-4 py-2 rounded-lg opacity-70">
-              🍏 App Store (جلد آ رہا ہے)
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="bg-green-700 text-white text-center py-8 px-4">
-        <h3 className="text-lg font-semibold mb-2">رابطہ کریں</h3>
-        <p>📞 0300-2044913 | 0313-8186414</p>
-        <p>Email: pkride1122@gmail.com</p>
-        <p className="mt-2">
-          <a
-            href="https://www.facebook.com/people/PK-Ride/100071607826976/"
-            className="underline hover:text-gray-200"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📘 ہمارا فیس بک پیج دیکھیں
-          </a>
-        </p>
-      </section>
+  <!-- Promo Banner -->
+  <section class="promo">
+    <div class="promo-content">
+      <h2>🚗 PK Ride – محفوظ اور جدید</h2>
+      <p>اب سفر ہو آرام دہ اور جدید ایپ کے ساتھ</p>
+      <a href="https://github.com/YourUsername/YourRepoName/releases/download/v1.0/app-release.apk" class="button">ڈاؤن لوڈ کریں</a>
     </div>
-  );
-}
+  </section>
+
+  <!-- Screenshots Section -->
+  <section class="section">
+    <h2 style="text-align:center;">📱 ایپ کے اسکرین شاٹس</h2>
+    <div class="screenshots">
+      <div class="screenshot-box">اسکرین شاٹ 1</div>
+      <div class="screenshot-box">اسکرین شاٹ 2</div>
+      <div class="screenshot-box">اسکرین شاٹ 3</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" style="border-top: 1px solid #ddd; text-align: center;">
+    <h2>رابطہ کریں</h2>
+    <p>📞 0300-2044913 | 0313-8186414</p>
+    <p>✉️ pkride1122@gmail.com</p>
+    <p><a href="https://www.facebook.com/people/PK-Ride/100071607826976/" target="_blank">ہمارا فیس بک پیج دیکھیں</a></p>
+  </section>
+</body>
+</html>
