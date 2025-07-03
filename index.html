@@ -1,99 +1,286 @@
-
-
-
-
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PK RIDE - ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس۔ محفوظ، سستی، قابلِ اعتماد۔ دیر، سوات، چترال، بونیر اور دیگر اضلاع میں خدمات۔" />
   <title>PK Ride</title>
+  
+  <!-- Google Font for Urdu -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet" />
+  
   <style>
     body {
-      font-family: sans-serif;
-      background: #ffffff;
-      color: #333;
-      line-height: 1.7;
+      font-family: 'Noto Nastaliq Urdu', serif, sans-serif;
+      background: #fff;
+      color: #222;
+      line-height: 1.8;
       direction: rtl;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
     }
+
+    /* Header */
     .hero {
       background-color: #16a34a;
       color: #fff;
       text-align: center;
-      padding: 2rem;
+      padding: 2.5rem 1rem 3rem;
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem;
+      position: relative;
     }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 0.3rem 0;
+      font-weight: 500;
+    }
+
+    /* Placeholder for logo */
+    .logo-placeholder {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 50%;
+      border: 2px solid #15803d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #15803d;
+      font-size: 1.1rem;
+      cursor: default;
+      user-select: none;
+    }
+
+    /* Sections */
     .section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
+      max-width: 820px;
+      margin: 3rem auto;
+      padding: 1.5rem 1rem;
+      background: #f9fafb;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
     }
+    .section.yellow {
+      background-color: #fef9c3;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #166534;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 1.7rem;
+      margin-bottom: 0.8rem;
+      color: #15803d;
+      font-weight: 700;
+    }
+    
+    p, ul, dl {
+      font-size: 1.1rem;
+      color: #2d2d2d;
+    }
+    ul {
+      padding-right: 1.7rem;
+      list-style-type: disc;
+      margin-left: 0;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    dl dt {
+      font-weight: 700;
+      margin-top: 1.3rem;
+      cursor: pointer;
+      color: #065f46;
+      transition: color 0.3s ease;
+    }
+    dl dt:hover {
+      color: #15803d;
+    }
+    dl dd {
+      margin-right: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #444;
+    }
+    blockquote {
+      border-right: 5px solid #16a34a;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      background: #ffffff;
+      font-style: italic;
+      color: #444;
+      border-radius: 0.4rem;
+      box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Buttons */
     .button {
       background-color: #16a34a;
       color: #fff;
-      padding: 0.5rem 1rem;
+      padding: 0.65rem 1.5rem;
       border-radius: 9999px;
       text-decoration: none;
       display: inline-block;
       margin-top: 1rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 5px 10px rgb(22 163 74 / 0.3);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .button:hover {
+    .button:hover:not(.disabled) {
       background-color: #15803d;
+      box-shadow: 0 8px 15px rgb(21 128 61 / 0.5);
     }
-    .box {
-      background-color: #f3f4f6;
-      border-radius: 0.5rem;
-      padding: 1rem;
+    .button.disabled,
+    .button[aria-disabled="true"] {
+      background-color: #999;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none;
+    }
+
+    /* Apps Download Flex */
+    .apps-download {
+      display: flex;
+      gap: 1.3rem;
+      flex-wrap: wrap;
+      justify-content: center;
       margin-top: 1rem;
     }
-    .yellow {
+    .app-box {
+      flex: 1 1 320px;
+      background: #f3f4f6;
+      border-radius: 0.7rem;
+      padding: 1.5rem 1.3rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      transition: transform 0.3s ease;
+    }
+    .app-box.yellow {
       background-color: #fef9c3;
     }
-    ul {
-      padding-right: 1.5rem;
+    .app-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 15px rgb(21 128 61 / 0.3);
     }
-    li {
-      margin-bottom: 0.3rem;
+    .app-box h3 {
+      margin-bottom: 0.6rem;
+      color: #166534;
     }
-    a {
-      color: #2563eb;
+    .app-box p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    /* Screenshots */
+    .screenshots {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .screenshot-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      width: 200px;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-weight: bold;
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    /* Social */
+    #social p a {
+      margin: 0 0.7rem;
+      font-weight: 700;
+      color: #16a34a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    #social p a:hover {
+      color: #0f4c25;
+      text-decoration: underline;
+    }
+
+    /* Contact */
+    .contact p {
+      font-size: 1.1rem;
+      margin: 0.3rem 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .section {
+        margin: 1.5rem 1rem;
+        padding: 1rem;
+      }
+      .apps-download {
+        flex-direction: column;
+        align-items: center;
+      }
+      .app-box {
+        max-width: 100%;
+      }
+      .hero h1 {
+        font-size: 2.4rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="hero">
+  <header class="hero" role="banner">
+    <div class="logo-placeholder" aria-label="PK Ride لوگو">PK</div>
     <h1>PK Ride</h1>
     <p>سفر کا نیا انداز – آسان، محفوظ اور سستا</p>
     <p>💡 ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس</p>
-  </div>
+  </header>
 
   <!-- Service Description -->
   <section class="section" aria-labelledby="service-desc">
     <h2 id="service-desc">📍 ہماری خدمات</h2>
-    <p>
-      <strong>PK RIDE</strong> نہ صرف دیر یا سوات بلکہ پورے ملاکنڈ ڈویژن کے تمام اضلاع میں اپنی خدمات فراہم کر رہا ہے۔ ہم نے شہری اور دیہی علاقوں کو آپس میں جوڑ کر ایک محفوظ، سستی اور قابلِ بھروسہ سفری نظام قائم کیا ہے۔
-    </p>
-    <p>
-      ہمارا مقصد یہ ہے کہ ہر فرد، چاہے وہ طالب علم ہو، مریض، بزرگ شہری یا سیاح — وہ بغیر کسی مشکل کے اپنی منزل تک پہنچ سکے۔ ہم نے مقامی افراد کو روزگار دیا، خواتین کو محفوظ ٹرانسپورٹ فراہم کی، اور ہر فرد کو آزادی سے سفر کا حق دیا۔
-    </p>
-    <p>
-      ہم اس وژن پر عمل پیرا ہیں کہ ملاکنڈ کے ہر گاؤں تک سہولت پہنچے، ہر وادی میں ترقی ہو، اور ہر انسان کو باوقار سفر میسر آئے۔
-    </p>
-    <a href="https://github.com/saleem-pixel/pkride-website/releases/download/v1.0/app-release.apk" download class="button">اینڈرائیڈ ایپ ڈاؤن لوڈ کریں</a>
+    <p><strong>PK RIDE</strong> پورے ملاکنڈ ڈویژن میں شہری و دیہی سطح پر جدید، سستی اور بااعتماد سفری سہولیات فراہم کر رہا ہے۔ ہم نے ان علاقوں کو مربوط کیا ہے جہاں سفر کبھی ایک خواب تھا۔</p>
+    <p>ہمارا مقصد صرف سواری فراہم کرنا نہیں بلکہ ایک ایسا نیٹ ورک قائم کرنا ہے جو ہر شہری کی روزمرہ ضروریات کو آسان بنائے۔ خواتین، طلباء، بزرگ شہری، مریض، سیاح — سب کے لیے یہ ایک محفوظ اور باوقار سفر ہے۔</p>
+    <p>ہم چاہتے ہیں کہ ہر وادی، ہر گاؤں، اور ہر شہر ترقی کی راہ پر گامزن ہو — اور اس کا آغاز PK RIDE سے ہو۔</p>
   </section>
 
   <!-- Malakand Districts -->
   <section class="section box" aria-labelledby="malakand-districts">
     <h2 id="malakand-districts">📍 مالاکنڈ ڈویژن کے اضلاع</h2>
-    <p>
-      ہم فخر سے ملاکنڈ ڈویژن کے ان تمام اضلاع میں اپنی سروسز پیش کر رہے ہیں، جہاں پہلے سفر ایک چیلنج تھا۔ ہمارا ہدف ہے کہ ہر گاؤں، قصبہ اور شہر کو جدید سفری سہولت سے جوڑیں۔
-    </p>
-    <ul style="line-height: 2;">
+    <ul>
       <li>سوات — قدرتی حسن سے بھرپور وادی</li>
-      <li>دیر بالا (Upper Dir) — کمراٹ جیسی حسین وادیاں</li>
-      <li>دیر زیریں (Lower Dir) — تعلیمی مراکز اور کاروباری سرگرمیوں کا مرکز</li>
+      <li>دیر بالا — کمراٹ جیسی حسین وادیاں</li>
+      <li>دیر زیریں — تعلیمی مراکز اور کاروباری سرگرمیوں کا مرکز</li>
       <li>چترال — ثقافتی ورثہ اور کیلاش کمیونٹی</li>
       <li>بونیر — پہاڑی علاقے اور تاریخی اہمیت</li>
       <li>ملاکنڈ — گیٹ وے ٹو ملاکنڈ ڈویژن</li>
@@ -105,19 +292,14 @@
   <!-- PK RIDE Vision -->
   <section class="section box yellow" aria-labelledby="pkride-vision">
     <h2 id="pkride-vision">🌟 PK RIDE کا وژن</h2>
-    <p>
-      🛣️ ہم صرف سواری فراہم نہیں کرتے، ہم رشتے بناتے ہیں —<br>
-      رشتے اعتماد کے، تحفظ کے، اور آسانی کے۔
-    </p>
+    <p>🛣️ ہم صرف سواری فراہم نہیں کرتے، ہم رشتے بناتے ہیں — رشتے اعتماد کے، تحفظ کے، اور آسانی کے۔</p>
     <ul style="list-style: none; padding: 0;">
       <li>👨‍👩‍👧‍👦 ایک بیٹی کا اعتماد، جو پہلی بار خود اکیلے اسکول جا سکتی ہے۔</li>
       <li>👴 ایک بزرگ شہری کی مسکراہٹ، جو آرام دہ گاڑی میں اسپتال پہنچتا ہے۔</li>
       <li>👨‍⚕️ ایک ڈاکٹر کا شکر گزار دل، جو دور دراز گاؤں تک وقت پر پہنچتا ہے۔</li>
       <li>👳‍♂️ ایک کسان، جو اپنی پیداوار وقت پر مارکیٹ تک پہنچاتا ہے۔</li>
     </ul>
-    <p>
-      یہ سب ممکن ہے، جب راستے کھلتے ہیں — جب <strong>PK RIDE</strong> پہنچتا ہے۔
-    </p>
+    <p>یہ سب ممکن ہے، جب راستے کھلتے ہیں — جب <strong>PK RIDE</strong> پہنچتا ہے۔</p>
     <h3>📱 صرف ایک ایپ — اور سارا سفر آسان</h3>
     <ul>
       <li>🔹 آن لائن بکنگ اور فوری کنفرمیشن</li>
@@ -127,90 +309,128 @@
       <li>🔹 دیہی خواتین کے لیے محفوظ ٹرانسپورٹ آپشنز</li>
       <li>🔹 سیاحتی علاقوں میں گائیڈ سپورٹ</li>
     </ul>
-    <p>
-      ہم چاہتے ہیں کہ آپ صرف سواری نہ کریں — بلکہ وقار، اعتماد اور خوشی کے ساتھ سفر کریں۔<br>
-      ہم ترقی کو صرف سڑکوں تک نہیں، بلکہ زندگیوں تک لانا چاہتے ہیں۔
-    </p>
+    <p>ہم چاہتے ہیں کہ آپ صرف سواری نہ کریں — بلکہ وقار، اعتماد اور خوشی کے ساتھ سفر کریں۔ ہم ترقی کو صرف سڑکوں تک نہیں، بلکہ زندگیوں تک لانا چاہتے ہیں۔</p>
     <h3>🚗 PK RIDE — آپ کی منزل، آپ کے دل کے قریب</h3>
-    <p>
-      اب وقت ہے کہ دیر، سوات، چترال اور ہر وادی میں ترقی کا پہیہ چلے۔<br>
-      اب وقت ہے کہ ہر شخص یہ کہے:<br><br>
-      <strong style="font-size: 1.2rem;">"میری سواری — PK RIDE!"</strong>
-    </p>
+    <p>اب وقت ہے کہ دیر، سوات، چترال اور ہر وادی میں ترقی کا پہیہ چلے۔ اب وقت ہے کہ ہر شخص یہ کہے:<br><br><strong style="font-size: 1.3rem;">"میری سواری — PK RIDE!"</strong></p>
   </section>
 
+  <!-- Apps Download Section -->
+  <section class="section" aria-labelledby="download-apps">
+    <h2 id="download-apps">📲 ہماری ایپس ڈاؤنلوڈ کریں</h2>
+    <div class="apps-download">
+      <div class="app-box">
+        <h3>🚖 PK Ride - سواری کے لیے</h3>
+        <p>آسان، محفوظ اور سستی سواری کی سہولت۔ فوری بکنگ، حقیقی وقت میں ٹریکنگ۔</p>
+        <a href="https://github.com/saleem-pixel/pkride-website/releases/download/v1.0/app-release.apk" class="button" download>سواری ایپ ڈاؤنلوڈ کریں</a>
+      </div>
+      <div class="app-box yellow">
+        <h3>🚚 PK Delivery - ڈیلیوری کے لیے</h3>
+        <p>آپ کی دہلیز تک تیز اور محفوظ ڈیلیوری۔ روزمرہ کی اشیاء، پارسلز اور کھانے کی فراہمی۔</p>
+        <a href="#" class="button disabled" aria-disabled="true" title="جلد دستیاب ہوگی">ڈیلیوری ایپ جلد آ رہی ہے</a>
+      </div>
+    </div>
+  </section>
 
-
-
-
- 
-
- 
-
-  <!-- Bike Ride Section -->
-  <section class="section box" aria-labelledby="bike-ride">
-    <h2 id="bike-ride">🚴 بائیک رائیڈ سروس</h2>
-    <p>
-      اب دفتر، بازار یا شہر کے اندر کہیں بھی آسانی سے بائیک رائیڈ بُک کریں — چند منٹ میں آپ کے دروازے پر۔
-    </p>
+  <!-- Ride Types -->
+  <section class="section box" aria-labelledby="ride-types">
+    <h2 id="ride-types">🚴 بائیک رائیڈ اور سواری کی اقسام</h2>
     <ul>
-      <li>🔥 انتہائی کم کرایہ</li>
-      <li>⏱️ ٹریفک سے بچنے کا حل</li>
-      <li>📱 آسان ایپ بُکنگ</li>
-      <li>🧍‍♂️ قابلِ اعتماد رائیڈرز</li>
-      <li>🛡️ محفوظ اور آرام دہ سفر</li>
+      <li>🔥 کم لاگت بائیک رائیڈز شہری علاقوں کے لیے</li>
+      <li>🚖 کار، ہائی روف، اور سوزوکی دستیاب</li>
+      <li>📱 ایپ کے ذریعے فوری بکنگ اور لوکیشن شیئرنگ</li>
     </ul>
   </section>
 
   <!-- Delivery Section -->
-  <section class="section" aria-labelledby="delivery">
-    <h2 id="delivery">🚚 PK Rider – آپ کی دہلیز پر</h2>
+  <section class="section box" aria-labelledby="delivery">
+    <h2 id="delivery">🚚 ڈیلیوری سروسز</h2>
     <ul>
-      <li>🧺 گروسری، سبزیاں، پھل</li>
-      <li>🛢️ گیس، پانی اور کچن سامان</li>
-      <li>💊 ادویات</li>
-      <li>👕 فیشن آئٹمز</li>
-      <li>📦 کورئیر اور ہوم ڈیلیوری</li>
+      <li>🧺 روزمرہ اشیاء: سبزیاں، پھل، دودھ</li>
+      <li>💊 ادویات کی فوری ڈیلیوری</li>
+      <li>📦 پارسل، کورئیر، اور ہوم ڈیلیوری</li>
     </ul>
   </section>
 
   <!-- Food Section -->
   <section class="section box yellow" aria-labelledby="food">
-    <h2 id="food">🍔 کھانا</h2>
+    <h2 id="food">🍔 کھانے کی خدمات</h2>
     <ul>
-      <li>🍢 کباب، تکہ، چکن رول</li>
-      <li>🐟 فریش مچھلی</li>
-      <li>🍕 فاسٹ فوڈ</li>
-      <li>🍛 دیسی کھانے</li>
+      <li>🍕 فاسٹ فوڈ، دیسی کھانے، چکن تکہ، فش</li>
+      <li>🧑‍🍳 مقامی ریسٹورنٹ سے ہوم ڈیلیوری</li>
     </ul>
   </section>
 
-  <!-- Promo Banner -->
-  <section class="promo" role="region" aria-label="PK Ride Promo Banner">
-    <div class="promo-content">
-      <h2>🚗 PK Ride – محفوظ اور جدید</h2>
-      <p>اب سفر ہو آرام دہ اور جدید ایپ کے ساتھ</p>
-      <a href="https://github.com/saleem-pixel/pkride-website/releases/download/v1.0/app-release.apk" class="button">ڈاؤن لوڈ کریں</a>
-    </div>
+  <!-- FAQs -->
+  <section class="section" aria-labelledby="faqs">
+    <h2 id="faqs">❓ عمومی سوالات</h2>
+    <dl>
+      <dt tabindex="0" aria-expanded="false">PK Ride کیسے کام کرتا ہے؟</dt>
+      <dd hidden>آپ ہماری ایپ سے اپنی لوکیشن منتخب کریں، بس چند کلکس میں ڈرائیور بک کریں، اور سفر شروع کریں۔</dd>
+
+      <dt tabindex="0" aria-expanded="false">کیا خواتین کے لیے محفوظ ہے؟</dt>
+      <dd hidden>جی ہاں، PK Ride خواتین کے لیے خصوصی محفوظ ٹرانسپورٹ آپشنز فراہم کرتا ہے۔</dd>
+
+      <dt tabindex="0" aria-expanded="false">ڈیلیوری ایپ کب دستیاب ہوگی؟</dt>
+      <dd hidden>ہم جلد ہی PK Delivery ایپ لانچ کریں گے، اس کے لیے ہماری ویب سائٹ اور سوشل میڈیا پر نظر رکھیں۔</dd>
+    </dl>
   </section>
 
-  <!-- Screenshots Section -->
-  <section class="section" aria-labelledby="screenshots">
-    <h2 id="screenshots" style="text-align:center;">📱 ایپ کے اسکرین شاٹس</h2>
-    <div class="screenshots">
-      <div class="screenshot-box" role="img" aria-label="اسکرین شاٹ 1">اسکرین شاٹ 1</div>
-      <div class="screenshot-box" role="img" aria-label="اسکرین شاٹ 2">اسکرین شاٹ 2</div>
-      <div class="screenshot-box" role="img" aria-label="اسکرین شاٹ 3">اسکرین شاٹ 3</div>
-    </div>
+  <!-- Testimonials -->
+  <section class="section box" aria-labelledby="testimonials">
+    <h2 id="testimonials">🌟 صارفین کی رائے</h2>
+    <blockquote>
+      "PK Ride نے میرا سفر آسان اور محفوظ بنایا۔ خاص طور پر خواتین کے لیے بہترین سروس!" – عائشہ خان
+    </blockquote>
+    <blockquote>
+      "ڈیلیوری سروس بہت تیز اور قابل اعتماد ہے۔ شکریہ PK Ride!" – محمد علی
+    </blockquote>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Social Media -->
+  <section class="section" aria-labelledby="social">
+    <h2 id="social">📢 ہم سے جُڑے رہیں</h2>
+    <p>
+      <a href="https://www.facebook.com/people/PK-Ride/100071607826976/" target="_blank" rel="noopener noreferrer" aria-label="Facebook PK Ride">فیس بک</a> | 
+      <a href="https://twitter.com/PKRide" target="_blank" rel="noopener noreferrer" aria-label="Twitter PK Ride">ٹوئٹر</a> | 
+      <a href="https://instagram.com/pkride" target="_blank" rel="noopener noreferrer" aria-label="Instagram PK Ride">انسٹاگرام</a>
+    </p>
+  </section>
+
+  <!-- Contact -->
   <section class="section contact" aria-labelledby="contact">
-    <h2 id="contact">رابطہ کریں</h2>
-    <p>📞 0300-2044913 | 0313-8186414</p>
-    <p>✉️ pkride1122@gmail.com</p>
-    <p><a href="https://www.facebook.com/people/PK-Ride/100071607826976/" target="_blank" rel="noopener noreferrer">ہمارا فیس بک پیج دیکھیں</a></p>
+    <h2 id="contact">📞 رابطہ کریں</h2>
+    <p>📱 0300-2044913 | 0313-8186414</p>
+    <p>✉️ <a href="mailto:pkride1122@gmail.com">pkride1122@gmail.com</a></p>
   </section>
 
+  <!-- Footer -->
+  <footer style="text-align:center; padding:1rem; font-size:0.9rem; color:#555;">
+    &copy; 2025 PK Ride۔ تمام حقوق محفوظ ہیں۔
+  </footer>
+
+  <script>
+    // FAQ toggle for accessibility
+    const dts = document.querySelectorAll('dl dt');
+    dts.forEach(dt => {
+      dt.addEventListener('click', () => {
+        const expanded = dt.getAttribute('aria-expanded') === 'true';
+        dt.setAttribute('aria-expanded', String(!expanded));
+        const dd = dt.nextElementSibling;
+        if(dd) {
+          if(expanded) {
+            dd.hidden = true;
+          } else {
+            dd.hidden = false;
+          }
+        }
+      });
+      dt.addEventListener('keydown', (e) => {
+        if(e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          dt.click();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
