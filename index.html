@@ -2,49 +2,81 @@
 <html lang="ur" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PK Ride</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PK Ride - مکمل ویب پیج</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #ffffff;
       color: #333;
       line-height: 1.7;
       direction: rtl;
+      margin: 0;
+      padding: 0;
     }
     .hero {
       background-color: #16a34a;
       color: #fff;
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem;
     }
-    .section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2.8rem;
+      font-weight: 700;
     }
-    .button {
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #16a34a;
+      border-bottom: 3px solid #16a34a;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    a.button {
       background-color: #16a34a;
       color: #fff;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.5rem;
       border-radius: 9999px;
       text-decoration: none;
       display: inline-block;
       margin-top: 1rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
-    .button:hover {
+    a.button:hover {
       background-color: #15803d;
     }
     .box {
       background-color: #f3f4f6;
       border-radius: 0.5rem;
-      padding: 1rem;
-      margin-top: 1rem;
+      padding: 1.2rem 1rem;
+      margin-top: 1.5rem;
+      color: #111;
     }
     .yellow {
       background-color: #fef9c3;
+    }
+    ul {
+      padding-right: 1.5rem;
+      margin-top: 0.5rem;
+      list-style-type: disc;
+    }
+    li {
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
     }
     .promo {
       background-image: url('pkride-banner.jpg');
@@ -54,16 +86,23 @@
       text-align: center;
       color: white;
       padding: 3rem 1rem;
+      margin-top: 2rem;
+      border-radius: 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .promo::before {
       content: "";
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.5);
+      border-radius: 1rem;
+      z-index: 0;
     }
     .promo-content {
       position: relative;
-      z-index: 10;
+      z-index: 1;
     }
     .screenshots {
       display: flex;
@@ -71,6 +110,10 @@
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 1rem;
     }
     .screenshot-box {
       background: #fff;
@@ -82,45 +125,64 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-weight: 600;
+      color: #555;
+      font-size: 1rem;
     }
-    ul {
-      padding-right: 1.5rem;
+    section.contact {
+      border-top: 1px solid #ddd;
+      text-align: center;
+      max-width: 900px;
+      margin: 3rem auto 2rem;
+      padding: 1rem;
+      color: #555;
     }
-    li {
-      margin-bottom: 0.3rem;
+    section.contact h2 {
+      color: #16a34a;
+      margin-bottom: 1rem;
     }
-    a {
-      color: #2563eb;
+    section.contact p, section.contact a {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #555;
+      text-decoration: none;
+      display: block;
+    }
+    section.contact a:hover {
+      color: #16a34a;
+      text-decoration: underline;
+    }
+    /* Malakand Districts List */
+    .districts-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.5rem;
+      justify-content: center;
+      margin-top: 0.7rem;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: #166534;
+    }
+    .districts-list span {
+      background: #d1fae5;
+      padding: 0.3rem 0.8rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgb(22 163 74 / 0.3);
     }
   </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <!-- Hero Section -->
-<div class="hero">
-  <h1>PK Ride</h1>
-  <p>سفر کا نیا انداز – آسان، محفوظ اور سستا</p>
-  <p>💡 ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس</p>
 
-  <div class="malakand-districts" style="margin-top: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; text-align: right; background: rgba(255 255 255 / 0.15); padding: 1rem 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); color: #fff; font-size: 1.1rem; line-height: 1.6;">
-    <h3 style="color: #fef9c3; font-weight: bold; font-size: 1.3rem; margin-bottom: 0.5rem;">📍 مالاکنڈ ڈویژن کے اضلاع:</h3>
-    <ul style="list-style-type: disc; padding-right: 1.5rem;">
-      <li>سوات</li>
-      <li>دیر بالا (Upper Dir)</li>
-      <li>دیر زیریں (Lower Dir)</li>
-      <li>چترال</li>
-      <li>بنوں (Buner)</li>
-      <li>ملاکنڈ</li>
-      <li>شانگلہ</li>
-      <li>بٹگرام</li>
-    </ul>
+  <!-- Hero Section -->
+  <div class="hero" role="banner">
+    <h1>PK Ride</h1>
+    <p>سفر کا نیا انداز – آسان، محفوظ اور سستا</p>
+    <p>💡 ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس</p>
   </div>
-</div>
-
 
   <!-- Service Description -->
-  <section class="section">
-    <p>
+  <section class="section" aria-labelledby="service-desc">
+    <p id="service-desc">
       Swat District, Chitral، Kumrat Valley، Kalkot، Sheringal، Upper Dir،
       Ushirai Dara، Wari City، Barawal، Doog Dara، Adenzai, Balambat, Khal, Lal Qilla,
       Munda, Samar Bagh, Timergara جیسے پسماندہ اور خوبصورت علاقوں میں اپنی سفری خدمات فراہم کر رہی ہے۔
@@ -132,12 +194,29 @@
       مقامی روزگار کے مواقع بھی پیدا کر رہا ہے۔
     </p>
     <a href="https://github.com/saleem-pixel/pkride-website/releases/download/v1.0/app-release.apk" download class="button">اینڈرائیڈ ایپ ڈاؤن لوڈ کریں</a>
+  </section>
 
+  <!-- Malakand Division Districts Section -->
+  <section class="section box" aria-labelledby="malakand-districts">
+    <h2 id="malakand-districts">📍 مالاکنڈ ڈویژن کے اضلاع</h2>
+    <p>
+      PK RIDE فخر سے مالاکنڈ ڈویژن کی خوبصورت وادیوں اور تاریخی علاقوں میں اپنی خدمات فراہم کر رہا ہے۔ یہاں وہ اضلاع ہیں جن میں ہم اپنی خدمات بہتر بنانے کے لیے کوشاں ہیں:
+    </p>
+    <div class="districts-list" role="list" aria-label="مالاکنڈ ڈویژن کے اضلاع کی فہرست">
+      <span role="listitem">سوات</span>
+      <span role="listitem">دیر بالا (Upper Dir)</span>
+      <span role="listitem">دیر زیریں (Lower Dir)</span>
+      <span role="listitem">چترال</span>
+      <span role="listitem">بنوں (Buner)</span>
+      <span role="listitem">ملاکنڈ</span>
+      <span role="listitem">شانگلہ</span>
+      <span role="listitem">بٹگرام</span>
+    </div>
   </section>
 
   <!-- Bike Ride Section -->
-  <section class="section box">
-    <h2>🚴 بائیک رائیڈ سروس</h2>
+  <section class="section box" aria-labelledby="bike-ride">
+    <h2 id="bike-ride">🚴 بائیک رائیڈ سروس</h2>
     <p>
       اب دفتر، بازار یا شہر کے اندر کہیں بھی آسانی سے بائیک رائیڈ بُک کریں — چند منٹ میں آپ کے دروازے پر۔
     </p>
@@ -151,8 +230,8 @@
   </section>
 
   <!-- Delivery Section -->
-  <section class="section">
-    <h2>🚚 PK Rider – آپ کی دہلیز پر</h2>
+  <section class="section" aria-labelledby="delivery">
+    <h2 id="delivery">🚚 PK Rider – آپ کی دہلیز پر</h2>
     <ul>
       <li>🧺 گروسری، سبزیاں، پھل</li>
       <li>🛢️ گیس، پانی اور کچن سامان</li>
@@ -163,8 +242,8 @@
   </section>
 
   <!-- Food Section -->
-  <section class="section box yellow">
-    <h2>🍔 کھانا</h2>
+  <section class="section box yellow" aria-labelledby="food">
+    <h2 id="food">🍔 کھانا</h2>
     <ul>
       <li>🍢 کباب، تکہ، چکن رول</li>
       <li>🐟 فریش مچھلی</li>
@@ -174,7 +253,7 @@
   </section>
 
   <!-- Promo Banner -->
-  <section class="promo">
+  <section class="promo" role="region" aria-label="PK Ride Promo Banner">
     <div class="promo-content">
       <h2>🚗 PK Ride – محفوظ اور جدید</h2>
       <p>اب سفر ہو آرام دہ اور جدید ایپ کے ساتھ</p>
@@ -183,21 +262,22 @@
   </section>
 
   <!-- Screenshots Section -->
-  <section class="section">
-    <h2 style="text-align:center;">📱 ایپ کے اسکرین شاٹس</h2>
+  <section class="section" aria-labelledby="screenshots">
+    <h2 id="screenshots" style="text-align:center;">📱 ایپ کے اسکرین شاٹس</h2>
     <div class="screenshots">
-      <div class="screenshot-box">اسکرین شاٹ 1</div>
-      <div class="screenshot-box">اسکرین شاٹ 2</div>
-      <div class="screenshot-box">اسکرین شاٹ 3</div>
+      <div class="screenshot-box" role="img" aria-label="اسکرین شاٹ 1">اسکرین شاٹ 1</div>
+      <div class="screenshot-box" role="img" aria-label="اسکرین شاٹ 2">اسکرین شاٹ 2</div>
+      <div class="screenshot-box" role="img" aria-label="اسکرین شاٹ 3">اسکرین شاٹ 3</div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="section" style="border-top: 1px solid #ddd; text-align: center;">
-    <h2>رابطہ کریں</h2>
+  <section class="section contact" aria-labelledby="contact">
+    <h2 id="contact">رابطہ کریں</h2>
     <p>📞 0300-2044913 | 0313-8186414</p>
     <p>✉️ pkride1122@gmail.com</p>
-    <p><a href="https://www.facebook.com/people/PK-Ride/100071607826976/" target="_blank">ہمارا فیس بک پیج دیکھیں</a></p>
+    <p><a href="https://www.facebook.com/people/PK-Ride/100071607826976/" target="_blank" rel="noopener noreferrer">ہمارا فیس بک پیج دیکھیں</a></p>
   </section>
+
 </body>
 </html>
