@@ -1,218 +1,146 @@
-<!DOCTYPE html>
+
+
+
+
+
+  <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PK Ride - مکمل ویب پیج</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PK Ride</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: sans-serif;
       background: #ffffff;
       color: #333;
       line-height: 1.7;
       direction: rtl;
-      margin: 0;
-      padding: 0;
     }
     .hero {
       background-color: #16a34a;
       color: #fff;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem;
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem;
     }
-    h1 {
-      margin: 0 0 0.5rem;
-      font-size: 2.8rem;
-      font-weight: 700;
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      color: #16a34a;
-      border-bottom: 3px solid #16a34a;
-      display: inline-block;
-      padding-bottom: 0.3rem;
-    }
     .section {
-      max-width: 900px;
+      max-width: 800px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 1rem;
     }
-    p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-    a.button {
+    .button {
       background-color: #16a34a;
       color: #fff;
-      padding: 0.6rem 1.5rem;
+      padding: 0.5rem 1rem;
       border-radius: 9999px;
       text-decoration: none;
       display: inline-block;
       margin-top: 1rem;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
     }
-    a.button:hover {
+    .button:hover {
       background-color: #15803d;
     }
     .box {
       background-color: #f3f4f6;
       border-radius: 0.5rem;
-      padding: 1.2rem 1rem;
-      margin-top: 1.5rem;
-      color: #111;
+      padding: 1rem;
+      margin-top: 1rem;
     }
     .yellow {
       background-color: #fef9c3;
     }
     ul {
       padding-right: 1.5rem;
-      margin-top: 0.5rem;
-      list-style-type: disc;
     }
     li {
-      margin-bottom: 0.4rem;
-      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
     }
-    .promo {
-      background-image: url('pkride-banner.jpg');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      text-align: center;
-      color: white;
-      padding: 3rem 1rem;
-      margin-top: 2rem;
-      border-radius: 1rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .promo::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      border-radius: 1rem;
-      z-index: 0;
-    }
-    .promo-content {
-      position: relative;
-      z-index: 1;
-    }
-    .screenshots {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 1rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 1rem;
-    }
-    .screenshot-box {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 0.5rem;
-      width: 200px;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      font-weight: 600;
-      color: #555;
-      font-size: 1rem;
-    }
-    section.contact {
-      border-top: 1px solid #ddd;
-      text-align: center;
-      max-width: 900px;
-      margin: 3rem auto 2rem;
-      padding: 1rem;
-      color: #555;
-    }
-    section.contact h2 {
-      color: #16a34a;
-      margin-bottom: 1rem;
-    }
-    section.contact p, section.contact a {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      color: #555;
-      text-decoration: none;
-      display: block;
-    }
-    section.contact a:hover {
-      color: #16a34a;
-      text-decoration: underline;
-    }
-    /* Malakand Districts List */
-    .districts-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem 1.5rem;
-      justify-content: center;
-      margin-top: 0.7rem;
-      font-weight: 600;
-      font-size: 1.15rem;
-      color: #166534;
-    }
-    .districts-list span {
-      background: #d1fae5;
-      padding: 0.3rem 0.8rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 1px 3px rgb(22 163 74 / 0.3);
+    a {
+      color: #2563eb;
     }
   </style>
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <div class="hero" role="banner">
+  <div class="hero">
     <h1>PK Ride</h1>
     <p>سفر کا نیا انداز – آسان، محفوظ اور سستا</p>
     <p>💡 ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس</p>
   </div>
 
- 
-<!-- Service Description -->
-<section class="section" aria-labelledby="service-desc">
-  <h2 id="service-desc">📍 ہماری خدمات</h2>
-  <p>
-    <strong>PK RIDE</strong> ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس ہے جو شہری اور دیہی دونوں علاقوں میں آسان، محفوظ، اور جدید سفری سہولیات فراہم کر رہی ہے۔ ہمارا مقصد صرف نقل و حمل نہیں بلکہ ایک نیا طرزِ زندگی متعارف کروانا ہے — جہاں ہر فرد اپنے سفر پر مکمل اختیار رکھتا ہو۔
-  </p>
-  <p>
-    ہم ان علاقوں میں کام کر رہے ہیں جہاں سفری سہولیات محدود تھیں یا بالکل نہ تھیں۔ PK RIDE نے ان مشکلات کو مواقع میں بدل دیا ہے، اور مقامی افراد کو نہ صرف سفری سہولت بلکہ روزگار بھی فراہم کیا ہے۔
-  </p>
-  <p>
-    ہمارا عزم ہے: خواتین کے لیے بااعتماد اور محفوظ سفر، طلباء کے لیے وقت پر اسکول و کالج پہنچنا، مریضوں کے لیے اسپتال تک فوری رسائی، اور سیاحوں کے لیے آسان نقل و حرکت۔ ہم ہر قدم پر آپ کے ساتھ ہیں۔
-  </p>
-  <a href="https://github.com/saleem-pixel/pkride-website/releases/download/v1.0/app-release.apk" download class="button">اینڈرائیڈ ایپ ڈاؤن لوڈ کریں</a>
-</section>
+  <!-- Service Description -->
+  <section class="section" aria-labelledby="service-desc">
+    <h2 id="service-desc">📍 ہماری خدمات</h2>
+    <p>
+      <strong>PK RIDE</strong> نہ صرف دیر یا سوات بلکہ پورے ملاکنڈ ڈویژن کے تمام اضلاع میں اپنی خدمات فراہم کر رہا ہے۔ ہم نے شہری اور دیہی علاقوں کو آپس میں جوڑ کر ایک محفوظ، سستی اور قابلِ بھروسہ سفری نظام قائم کیا ہے۔
+    </p>
+    <p>
+      ہمارا مقصد یہ ہے کہ ہر فرد، چاہے وہ طالب علم ہو، مریض، بزرگ شہری یا سیاح — وہ بغیر کسی مشکل کے اپنی منزل تک پہنچ سکے۔ ہم نے مقامی افراد کو روزگار دیا، خواتین کو محفوظ ٹرانسپورٹ فراہم کی، اور ہر فرد کو آزادی سے سفر کا حق دیا۔
+    </p>
+    <p>
+      ہم اس وژن پر عمل پیرا ہیں کہ ملاکنڈ کے ہر گاؤں تک سہولت پہنچے، ہر وادی میں ترقی ہو، اور ہر انسان کو باوقار سفر میسر آئے۔
+    </p>
+    <a href="https://github.com/saleem-pixel/pkride-website/releases/download/v1.0/app-release.apk" download class="button">اینڈرائیڈ ایپ ڈاؤن لوڈ کریں</a>
+  </section>
 
-<!-- Malakand Division Districts Section -->
-<section class="section box" aria-labelledby="malakand-districts">
-  <h2 id="malakand-districts">📍 مالاکنڈ ڈویژن کے اضلاع</h2>
-  <p>
-    ہم فخر سے ملاکنڈ ڈویژن کے ان تمام اضلاع میں اپنی سروسز پیش کر رہے ہیں، جہاں پہلے سفر ایک چیلنج تھا۔ ہمارا ہدف ہے کہ ہر گاؤں، قصبہ اور شہر کو جدید سفری سہولت سے جوڑیں۔
-  </p>
-  <ul style="line-height: 2;">
-    <li>سوات</li>
-    <li>دیر بالا (Upper Dir)</li>
-    <li>دیر زیریں (Lower Dir)</li>
-    <li>چترال</li>
-    <li>بونیر</li>
-    <li>ملاکنڈ</li>
-    <li>شانگلہ</li>
-    <li>بٹگرام</li>
-  </ul>
-</section>
+  <!-- Malakand Districts -->
+  <section class="section box" aria-labelledby="malakand-districts">
+    <h2 id="malakand-districts">📍 مالاکنڈ ڈویژن کے اضلاع</h2>
+    <p>
+      ہم فخر سے ملاکنڈ ڈویژن کے ان تمام اضلاع میں اپنی سروسز پیش کر رہے ہیں، جہاں پہلے سفر ایک چیلنج تھا۔ ہمارا ہدف ہے کہ ہر گاؤں، قصبہ اور شہر کو جدید سفری سہولت سے جوڑیں۔
+    </p>
+    <ul style="line-height: 2;">
+      <li>سوات — قدرتی حسن سے بھرپور وادی</li>
+      <li>دیر بالا (Upper Dir) — کمراٹ جیسی حسین وادیاں</li>
+      <li>دیر زیریں (Lower Dir) — تعلیمی مراکز اور کاروباری سرگرمیوں کا مرکز</li>
+      <li>چترال — ثقافتی ورثہ اور کیلاش کمیونٹی</li>
+      <li>بونیر — پہاڑی علاقے اور تاریخی اہمیت</li>
+      <li>ملاکنڈ — گیٹ وے ٹو ملاکنڈ ڈویژن</li>
+      <li>شانگلہ — خوبصورت پہاڑی سلسلے</li>
+      <li>بٹگرام — شمالی علاقوں سے جڑنے کا راستہ</li>
+    </ul>
+  </section>
+
+  <!-- PK RIDE Vision -->
+  <section class="section box yellow" aria-labelledby="pkride-vision">
+    <h2 id="pkride-vision">🌟 PK RIDE کا وژن</h2>
+    <p>
+      🛣️ ہم صرف سواری فراہم نہیں کرتے، ہم رشتے بناتے ہیں —<br>
+      رشتے اعتماد کے، تحفظ کے، اور آسانی کے۔
+    </p>
+    <ul style="list-style: none; padding: 0;">
+      <li>👨‍👩‍👧‍👦 ایک بیٹی کا اعتماد، جو پہلی بار خود اکیلے اسکول جا سکتی ہے۔</li>
+      <li>👴 ایک بزرگ شہری کی مسکراہٹ، جو آرام دہ گاڑی میں اسپتال پہنچتا ہے۔</li>
+      <li>👨‍⚕️ ایک ڈاکٹر کا شکر گزار دل، جو دور دراز گاؤں تک وقت پر پہنچتا ہے۔</li>
+      <li>👳‍♂️ ایک کسان، جو اپنی پیداوار وقت پر مارکیٹ تک پہنچاتا ہے۔</li>
+    </ul>
+    <p>
+      یہ سب ممکن ہے، جب راستے کھلتے ہیں — جب <strong>PK RIDE</strong> پہنچتا ہے۔
+    </p>
+    <h3>📱 صرف ایک ایپ — اور سارا سفر آسان</h3>
+    <ul>
+      <li>🔹 آن لائن بکنگ اور فوری کنفرمیشن</li>
+      <li>🔹 ڈرائیورز کی مکمل جانچ پڑتال</li>
+      <li>🔹 کم قیمت، زیادہ سہولت</li>
+      <li>🔹 ریئل ٹائم ٹریکنگ اور کسٹمر سپورٹ</li>
+      <li>🔹 دیہی خواتین کے لیے محفوظ ٹرانسپورٹ آپشنز</li>
+      <li>🔹 سیاحتی علاقوں میں گائیڈ سپورٹ</li>
+    </ul>
+    <p>
+      ہم چاہتے ہیں کہ آپ صرف سواری نہ کریں — بلکہ وقار، اعتماد اور خوشی کے ساتھ سفر کریں۔<br>
+      ہم ترقی کو صرف سڑکوں تک نہیں، بلکہ زندگیوں تک لانا چاہتے ہیں۔
+    </p>
+    <h3>🚗 PK RIDE — آپ کی منزل، آپ کے دل کے قریب</h3>
+    <p>
+      اب وقت ہے کہ دیر، سوات، چترال اور ہر وادی میں ترقی کا پہیہ چلے۔<br>
+      اب وقت ہے کہ ہر شخص یہ کہے:<br><br>
+      <strong style="font-size: 1.2rem;">"میری سواری — PK RIDE!"</strong>
+    </p>
+  </section>
+
+
+
 
 
  
