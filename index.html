@@ -1,117 +1,203 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PK Ride</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.7;
+      direction: rtl;
+    }
+    .hero {
+      background-color: #16a34a;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+    .section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .button {
+      background-color: #16a34a;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .button:hover {
+      background-color: #15803d;
+    }
+    .box {
+      background-color: #f3f4f6;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .yellow {
+      background-color: #fef9c3;
+    }
+    .promo {
+      background-image: url('pkride-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      text-align: center;
+      color: white;
+      padding: 3rem 1rem;
+    }
+    .promo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .promo-content {
+      position: relative;
+      z-index: 10;
+    }
+    .screenshots {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .screenshot-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      width: 200px;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    ul {
+      padding-right: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+    a {
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+<div class="hero">
+  <h1>PK Ride</h1>
+  <p>سفر کا نیا انداز – آسان، محفوظ اور سستا</p>
+  <p>💡 ملاکنڈ ڈویژن کی پہلی آن لائن ٹیکسی سروس</p>
 
-export default function PkRideVisionWithMalakand() {
-  const malakandDistricts = [
-    "سوات",
-    "دیر بالا (Upper Dir)",
-    "دیر زیریں (Lower Dir)",
-    "چترال",
-    "بنوں (Buner)",
-    "ملاکنڈ",
-    "شانگلہ",
-    "بٹگرام",
-  ];
+  <div class="malakand-districts" style="margin-top: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto; text-align: right; background: rgba(255 255 255 / 0.15); padding: 1rem 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); color: #fff; font-size: 1.1rem; line-height: 1.6;">
+    <h3 style="color: #fef9c3; font-weight: bold; font-size: 1.3rem; margin-bottom: 0.5rem;">📍 مالاکنڈ ڈویژن کے اضلاع:</h3>
+    <ul style="list-style-type: disc; padding-right: 1.5rem;">
+      <li>سوات</li>
+      <li>دیر بالا (Upper Dir)</li>
+      <li>دیر زیریں (Lower Dir)</li>
+      <li>چترال</li>
+      <li>بنوں (Buner)</li>
+      <li>ملاکنڈ</li>
+      <li>شانگلہ</li>
+      <li>بٹگرام</li>
+    </ul>
+  </div>
+</div>
 
-  return (
-    <section className="bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 text-white py-12 px-6 rounded-lg max-w-5xl mx-auto my-16 shadow-lg">
-      <h2 className="text-4xl font-extrabold mb-6 text-center">PK RIDE — ایک نئی صبح کا آغاز</h2>
-      <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-        کہتے ہیں:
-      </p>
-      <blockquote className="italic text-xl max-w-3xl mx-auto mb-8 border-l-4 border-yellow-400 pl-4">
-        "جہاں سڑک ہو، وہاں زندگی رواں دواں ہوتی ہے۔"  
-        لیکن ہمارے کچھ علاقوں میں سڑک تو تھی، سفر نہ تھا۔  
-        راستے تو تھے، لیکن سہولت نہ تھی۔  
-        لوگ تھے، مگر منزلیں بہت دور تھیں۔
-      </blockquote>
-      <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-        PK RIDE نے اسی فاصلے کو ختم کرنے کا فیصلہ کیا —  
-        نہ صرف جغرافیائی فاصلے، بلکہ دلوں اور سہولتوں کے درمیان فاصلہ۔
-      </p>
 
-      <h3 className="text-2xl font-bold mb-4 text-center">🏔️ ہم وہاں گئے، جہاں باقی صرف وعدے لے کر آئے</h3>
-      <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-4">
-        ہم نے سڑکوں پر نہیں، یقین پر سفر شروع کیا۔  
-        ہم نے ان علاقوں میں قدم رکھا جہاں:
-      </p>
-      <ul className="list-disc list-inside max-w-3xl mx-auto mb-8 space-y-2 text-lg">
-        <li>بسیں صرف خواب میں چلتی تھیں</li>
-        <li>خواتین نے کبھی تنہا سفر نہیں کیا تھا</li>
-        <li>طلباء نے پیدل اسکول جانے کو قسمت مانا تھا</li>
-        <li>بزرگوں نے شہر کو صرف بیماری میں دیکھا تھا</li>
-      </ul>
-      <p className="text-lg font-semibold max-w-3xl mx-auto mb-8 text-center">
-        اور ہم نے کہا:  
-        <br />
-        "اب بس کافی ہوا — اب PK RIDE آئے گا!"
-      </p>
+  <!-- Service Description -->
+  <section class="section">
+    <p>
+      Swat District, Chitral، Kumrat Valley، Kalkot، Sheringal، Upper Dir،
+      Ushirai Dara، Wari City، Barawal، Doog Dara، Adenzai, Balambat, Khal, Lal Qilla,
+      Munda, Samar Bagh, Timergara جیسے پسماندہ اور خوبصورت علاقوں میں اپنی سفری خدمات فراہم کر رہی ہے۔
+    </p>
+    <p>
+      ہمارا مشن ہے کہ ہم ان دور دراز علاقوں کے لوگوں کو محفوظ، قابلِ اعتماد، سستی
+      اور جدید ٹیکنالوجی سے لیس آن لائن ٹیکسی سروس فراہم کریں تاکہ وہ اعتماد کے ساتھ
+      اپنی منزل تک پہنچ سکیں۔ PK Ride نہ صرف سفری سہولیات کو بہتر بنانا چاہتا ہے بلکہ
+      مقامی روزگار کے مواقع بھی پیدا کر رہا ہے۔
+    </p>
+    <a href="https://github.com/saleem-pixel/pkride-website/releases/download/v1.0/app-release.apk" download class="button">اینڈرائیڈ ایپ ڈاؤن لوڈ کریں</a>
 
-      <h3 className="text-2xl font-bold mb-4 text-center">🚐 PK RIDE — وہ امید، جو اب حقیقت ہے</h3>
-      <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-        آج ہم فخر سے کہتے ہیں کہ ہم موجود ہیں:  
-        <br />
-        اپر دیر، شرینگل، کالکوٹ، عشیرئی درہ، واری سٹی، براول، دوگ درہ، کمراٹ ویلی، چترال، سوات، ادینزئی، خال، لعل قلعہ، مٹھہ، سمرباغ، تیمرگرہ، اور بلامبٹ میں۔  
-        جہاں پہلے “سفر” ایک مسئلہ تھا، وہاں اب PK RIDE ایک سہولت ہے۔
-      </p>
+  </section>
 
-      <h3 className="text-3xl font-extrabold mb-4 text-center underline decoration-yellow-400">
-        📍 مالاکنڈ ڈویژن کے اضلاع
-      </h3>
-      <p className="text-center mb-6 max-w-3xl mx-auto text-lg">
-        مالاکنڈ ڈویژن کی خوبصورت وادیوں اور تاریخی علاقوں کو PK RIDE فخر سے اپنی سروسز فراہم کر رہا ہے۔  
-        یہاں وہ اضلاع ہیں جن میں ہم اپنی خدمات بہتر بنانے کے لیے کوشاں ہیں:
-      </p>
-      <ul className="list-disc list-inside max-w-md mx-auto mb-12 space-y-2 text-lg text-center">
-        {malakandDistricts.map((district, i) => (
-          <li key={i} className="hover:text-yellow-300 transition-colors cursor-default">
-            {district}
-          </li>
-        ))}
-      </ul>
+  <!-- Bike Ride Section -->
+  <section class="section box">
+    <h2>🚴 بائیک رائیڈ سروس</h2>
+    <p>
+      اب دفتر، بازار یا شہر کے اندر کہیں بھی آسانی سے بائیک رائیڈ بُک کریں — چند منٹ میں آپ کے دروازے پر۔
+    </p>
+    <ul>
+      <li>🔥 انتہائی کم کرایہ</li>
+      <li>⏱️ ٹریفک سے بچنے کا حل</li>
+      <li>📱 آسان ایپ بُکنگ</li>
+      <li>🧍‍♂️ قابلِ اعتماد رائیڈرز</li>
+      <li>🛡️ محفوظ اور آرام دہ سفر</li>
+    </ul>
+  </section>
 
-      <h3 className="text-2xl font-bold mb-4 text-center">❤️ یہ صرف سروس نہیں — یہ ایک عہد ہے</h3>
-      <ul className="list-disc list-inside max-w-3xl mx-auto mb-8 space-y-2 text-lg">
-        <li>کہ خواتین محفوظ ہوں گی</li>
-        <li>کہ طلباء وقت پر پہنچیں گے</li>
-        <li>کہ مریض آرام سے اسپتال پہنچیں گے</li>
-        <li>کہ سیاح آسانی سے قدرت سے لطف اندوز ہوں گے</li>
-        <li>کہ معذور افراد بھی باعزت سفر کریں گے</li>
-      </ul>
-      <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8 font-semibold text-center">
-        یہی ہمارا وعدہ ہے۔  
-        یہی ہمارا مشن ہے۔  
-        یہی ہماری پہچان ہے۔
-      </p>
+  <!-- Delivery Section -->
+  <section class="section">
+    <h2>🚚 PK Rider – آپ کی دہلیز پر</h2>
+    <ul>
+      <li>🧺 گروسری، سبزیاں، پھل</li>
+      <li>🛢️ گیس، پانی اور کچن سامان</li>
+      <li>💊 ادویات</li>
+      <li>👕 فیشن آئٹمز</li>
+      <li>📦 کورئیر اور ہوم ڈیلیوری</li>
+    </ul>
+  </section>
 
-      <h3 className="text-2xl font-bold mb-4 text-center">🔮 PK RIDE — مستقبل کی راہ پر</h3>
-      <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-        ہم رکنے والے نہیں۔  
-        اب ہمارا اگلا قدم ہے:  
-      </p>
-      <ul className="list-disc list-inside max-w-3xl mx-auto mb-8 space-y-2 text-lg">
-        <li>ہر یونیورسٹی، اسپتال، عدالت، اور سیاحتی مقام کو آپ سے جوڑنا</li>
-        <li>ہر دیہات کو شہر کی سہولت دینا</li>
-        <li>اور ہر پاکستانی کو یہ احساس دینا کہ وہ اکیلا نہیں ہے</li>
-      </ul>
+  <!-- Food Section -->
+  <section class="section box yellow">
+    <h2>🍔 کھانا</h2>
+    <ul>
+      <li>🍢 کباب، تکہ، چکن رول</li>
+      <li>🐟 فریش مچھلی</li>
+      <li>🍕 فاسٹ فوڈ</li>
+      <li>🍛 دیسی کھانے</li>
+    </ul>
+  </section>
 
-      <h3 className="text-2xl font-bold mb-4 text-center">📲 اب آپ کہاں جانا چاہتے ہیں؟</h3>
-      <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-8 text-center">
-        آپ کی انگلی کی ایک ٹیپ سے:  
-      </p>
-      <ul className="list-disc list-inside max-w-3xl mx-auto mb-12 space-y-2 text-lg text-center">
-        <li>گاڑی آپ کے دروازے پر</li>
-        <li>ڈرائیور آپ کے نام پر</li>
-        <li>سفر آپ کی مرضی کا</li>
-        <li>کرایہ آپ کے بجٹ میں</li>
-      </ul>
+  <!-- Promo Banner -->
+  <section class="promo">
+    <div class="promo-content">
+      <h2>🚗 PK Ride – محفوظ اور جدید</h2>
+      <p>اب سفر ہو آرام دہ اور جدید ایپ کے ساتھ</p>
+      <a href="https://github.com/saleem-pixel/pkride-website/releases/download/v1.0/app-release.apk" class="button">ڈاؤن لوڈ کریں</a>
+    </div>
+  </section>
 
-      <p className="text-2xl font-extrabold text-center mb-6">PK RIDE — صرف ایک ایپ نہیں، ایک انقلاب</p>
+  <!-- Screenshots Section -->
+  <section class="section">
+    <h2 style="text-align:center;">📱 ایپ کے اسکرین شاٹس</h2>
+    <div class="screenshots">
+      <div class="screenshot-box">اسکرین شاٹ 1</div>
+      <div class="screenshot-box">اسکرین شاٹ 2</div>
+      <div class="screenshot-box">اسکرین شاٹ 3</div>
+    </div>
+  </section>
 
-      <p className="text-xl font-semibold text-center">
-        🚗 PK RIDE — ہر دروازے پر ترقی، ہر دل میں یقین  
-        <br />
-        ہم صرف سواریاں نہیں چلاتے — ہم خوابوں کو منزل تک پہنچاتے ہیں۔
-      </p>
-    </section>
-  );
-}
+  <!-- Contact Section -->
+  <section class="section" style="border-top: 1px solid #ddd; text-align: center;">
+    <h2>رابطہ کریں</h2>
+    <p>📞 0300-2044913 | 0313-8186414</p>
+    <p>✉️ pkride1122@gmail.com</p>
+    <p><a href="https://www.facebook.com/people/PK-Ride/100071607826976/" target="_blank">ہمارا فیس بک پیج دیکھیں</a></p>
+  </section>
+</body>
+</html>
