@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>PKRides ڈرائیور پورٹل</title>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; background: #f7f7f7; }
+    input { margin: 10px; padding: 10px; width: 80%; max-width: 300px; }
+    button { padding: 10px 20px; font-size: 16px; margin-top: 10px; }
+    #apkSection { display: none; margin-top: 30px; }
+  </style>
+</head>
+<body>
+
+  <h1>PKRides ڈرائیور لاگ ان</h1>
+
+  <input type="email" id="email" placeholder="ای میل درج کریں" /><br>
+  <input type="password" id="password" placeholder="پاس ورڈ درج کریں" /><br>
+  <button onclick="login()">لاگ ان کریں</button>
+  <button onclick="register()">رجسٹریشن کریں</button>
+
+  <div id="apkSection">
+    <h2>APK ڈاؤنلوڈ کریں</h2>
+    <a id="downloadLink" href="#" target="_blank">
+      <button>APK ڈاؤنلوڈ</button>
+    </a>
+    <br><br>
+    <button onclick="logout()">لاگ آؤٹ</button>
+  </div>
+
+  <script>
+    // 🔐 Replace with your Firebase Config
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT.appspot.com",
+      appId: "YOUR_APP_ID"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const storage = firebase.storage();
+
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        document.getElementById('apkSection').style.display = 'block';
+        storage.ref('pkride-driver.apk').getDownloadURL().then(url => {
+          document.getElementById('downloadLink').href = url;
+        });
+      } else {
+        document.getElementById('apkSection').style.display = 'none';
+      }
+    });
+
+    function login() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      auth.signInWithEmailAndPassword(email, password).catch(alert);
+    }
+
+    function register() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      auth.createUserWithEmailAndPassword(email, password).catch(alert);
+    }
+
+    function logout() {
+      auth.signOut();
+    }
+  </script>
+
+</body>
+</html>
